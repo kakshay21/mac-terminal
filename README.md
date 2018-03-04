@@ -1,5 +1,5 @@
 # Mac Terminal
-![](https://github.com/kakshay21/mac-terminal/image.png)
+![](https://github.com/kakshay21/mac-terminal/blob/master/image.png)
 
 ## iTerm 2 :
 Firstly, download and install iTerm2. It's a free replacement for the default terminal that comes with your OS X installation. The installation is pretty straightforward.
