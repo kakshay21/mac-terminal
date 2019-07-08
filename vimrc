@@ -110,7 +110,6 @@ set laststatus=2
 " Enable Elite mode, No ARRRROWWS!!!!
 "let g:elite_mode=1
 set guifont=DroidSansMono_Nerd_Font:h11
-let g:airline_powerline_fonts = 1
 let g:auto_save = 1
 " Enable highlighting of the current line
 set cursorline
@@ -138,7 +137,8 @@ let g:gitgutter_terminal_reports_focus=0
 " Vim-Airline Configuration
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1 
-let g:airline_theme='hybrid'
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
 let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1 
 
