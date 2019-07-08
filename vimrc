@@ -6,7 +6,7 @@ set encoding=UTF-8
 """" START Vundle Configuration 
 
 " Disable file type for vundle
-filetype off                  " required
+"filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -109,11 +109,14 @@ set laststatus=2
 
 " Enable Elite mode, No ARRRROWWS!!!!
 "let g:elite_mode=1
-set guifont=DroidSansMono_Nerd_Font:h11
+let g:WebDevIconsOS = 'Darwin'
+let g:webdevicons_enable = 1
+let g:webdevicons_enable_nerdtree = 1
+let g:webdevicons_enable_airline_tabline = 1
+set guifont=Hack_Regular_Nerd_Font_Complete:h14
 let g:auto_save = 1
 " Enable highlighting of the current line
 set cursorline
-
 " Theme and Styling 
 set t_Co=256
 set background=dark
@@ -130,17 +133,18 @@ colorscheme spacemacs-theme
 let g:gitgutter_enabled = 1
 let g:gitgutter_signs = 1
 let g:gitgutter_highlight_lines = 1
-
+let g:webdevicons_enable_nerdtree = 1
 let g:spacegray_underline_search = 1
 let g:spacegray_italicize_comments = 1
 let g:gitgutter_terminal_reports_focus=0
+
 " Vim-Airline Configuration
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1 
+let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
-let g:hybrid_custom_term_colors = 1
-let g:hybrid_reduced_contrast = 1 
+"let g:hybrid_custom_term_colors = 1
+"let g:hybrid_reduced_contrast = 1 
 
 " Syntastic Configuration
 set statusline+=%#warningmsg#
@@ -227,7 +231,7 @@ endfunction
 "inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
 
 " AutoComplPop like behavior.
-"let g:neocomplete#enable_auto_select = 1
+let g:neocomplete#enable_auto_select = 1
 
 
 " Enable omni completion.

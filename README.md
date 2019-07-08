@@ -41,3 +41,9 @@ curl -sLf https://spacevim.org/install.sh | bash -s -- --install neovim
 ```
 curl -sLf https://spacevim.org/install.sh | bash -s -- --uninstall
 ```
+
+### Use Hack nerd fonts
+```
+brew tap homebrew/cask-fonts
+brew cask install font-hack-nerd-font
+```
