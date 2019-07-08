@@ -1,7 +1,7 @@
 set nocompatible
 syntax on
 set nowrap
-set encoding=utf8
+set encoding=UTF-8
 
 """" START Vundle Configuration 
 
@@ -31,9 +31,10 @@ Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'gilsondev/searchtasks.vim'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'tpope/vim-dispatch'
+Plugin '907th/vim-auto-save'
 
 " Generic Programming Support 
-Plugin 'jakedouglas/exuberant-ctags'
+"Plugin 'jakedouglas/exuberant-ctags'
 Plugin 'honza/vim-snippets'
 Plugin 'Townk/vim-autoclose'
 Plugin 'tomtom/tcomment_vim'
@@ -44,6 +45,7 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'neomake/neomake'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
+Plugin 'w0rp/ale'
 
 " Markdown / Writting
 Plugin 'reedes/vim-pencil'
@@ -55,31 +57,9 @@ Plugin 'LanguageTool'
 Plugin 'kablamo/vim-git-log'
 Plugin 'gregsexton/gitv'
 Plugin 'tpope/vim-fugitive'
-"Plugin 'jaxbot/github-issues.vim'
-
-" PHP Support
-"Plugin 'phpvim/phpcd.vim'
-"Plugin 'tobyS/pdv'
-
-" Erlang Support
-"Plugin 'vim-erlang/vim-erlang-tags'
-"Plugin 'vim-erlang/vim-erlang-runtime'
-"Plugin 'vim-erlang/vim-erlang-omnicomplete'
-"Plugin 'vim-erlang/vim-erlang-compiler'
-
-" Elixir Support 
-"Plugin 'elixir-lang/vim-elixir'
-"Plugin 'avdgaag/vim-phoenix'
-"Plugin 'mmorearty/elixir-ctags'
-"Plugin 'mattreduce/vim-mix'
-"Plugin 'BjRo/vim-extest'
-"Plugin 'frost/vim-eh-docs'
-"Plugin 'slashmili/alchemist.vim'
-"Plugin 'tpope/vim-endwise'
-"Plugin 'jadercorrea/elixir_generator.vim'
-
-" Elm Support
-"Plugin 'lambdatoast/elm.vim'
+Plugin 'jaxbot/github-issues.vim'
+Plugin 'mhinz/vim-signify'
+Plugin 'airblade/vim-gitgutter'
 
 " Theme / Interface
 Plugin 'AnsiEsc.vim'
@@ -90,7 +70,7 @@ Plugin 'sjl/badwolf'
 Plugin 'tomasr/molokai'
 Plugin 'morhetz/gruvbox'
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
-Plugin 'junegVimarlineunn/limelight.vim'
+"Plugin 'junegVimarlineunn/limelight.vim'
 Plugin 'mkarmona/colorsbox'
 Plugin 'romainl/Apprentice'
 Plugin 'Lokaltog/vim-distinguished'
@@ -123,13 +103,15 @@ set tabstop=4
 set shiftwidth=4
 set smarttab
 set expandtab
-
+set updatetime=100
 " Always display the status line
 set laststatus=2
 
 " Enable Elite mode, No ARRRROWWS!!!!
-let g:elite_mode=1
-
+"let g:elite_mode=1
+set guifont=DroidSansMono_Nerd_Font:h11
+let g:airline_powerline_fonts = 1
+let g:auto_save = 1
 " Enable highlighting of the current line
 set cursorline
 
@@ -142,12 +124,17 @@ if (has("termguicolors"))
 endif
 
 let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme Spacegray
-"colorscheme spacemacs-theme
- 
+"colorscheme Spacegray
+colorscheme spacemacs-theme
+
+" git-gutter configurations 
+let g:gitgutter_enabled = 1
+let g:gitgutter_signs = 1
+let g:gitgutter_highlight_lines = 1
+
 let g:spacegray_underline_search = 1
 let g:spacegray_italicize_comments = 1
-
+let g:gitgutter_terminal_reports_focus=0
 " Vim-Airline Configuration
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1 
@@ -163,7 +150,7 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_wq = 0
 " let g:syntastic_enable_elixir_checker = 1
 " let g:syntastic_elixir_checkers = ["elixir"]
 
