@@ -107,8 +107,6 @@ set updatetime=100
 " Always display the status line
 set laststatus=2
 
-" Enable Elite mode, No ARRRROWWS!!!!
-"let g:elite_mode=1
 let g:WebDevIconsOS = 'Darwin'
 let g:webdevicons_enable = 1
 let g:webdevicons_enable_nerdtree = 1
