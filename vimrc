@@ -3,7 +3,7 @@ syntax on
 set nowrap
 set encoding=UTF-8
 
-"""" START Vundle Configuration 
+"""" START Vundle Configuration
 
 " Disable file type for vundle
 "filetype off                  " required
@@ -33,7 +33,7 @@ Plugin 'Shougo/neocomplete.vim'
 Plugin 'tpope/vim-dispatch'
 Plugin '907th/vim-auto-save'
 
-" Generic Programming Support 
+" Generic Programming Support
 "Plugin 'jakedouglas/exuberant-ctags'
 Plugin 'honza/vim-snippets'
 Plugin 'Townk/vim-autoclose'
@@ -45,7 +45,7 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'neomake/neomake'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
-Plugin 'w0rp/ale'
+"Plugin 'w0rp/ale'
 
 " Markdown / Writting
 Plugin 'reedes/vim-pencil'
@@ -88,7 +88,7 @@ set backspace=indent,eol,start
 
 call vundle#end()            " required
 filetype plugin indent on    " required
-"""" END Vundle Configuration 
+"""" END Vundle Configuration
 
 """""""""""""""""""""""""""""""""""""
 " Configuration Section
@@ -103,10 +103,12 @@ set tabstop=4
 set shiftwidth=4
 set smarttab
 set expandtab
-set updatetime=100
+set updatetime=250
 " Always display the status line
 set laststatus=2
 
+" Enable Elite mode, No ARRRROWWS!!!!
+"let g:elite_mode=1
 let g:WebDevIconsOS = 'Darwin'
 let g:webdevicons_enable = 1
 let g:webdevicons_enable_nerdtree = 1
@@ -115,7 +117,7 @@ set guifont=Hack_Regular_Nerd_Font_Complete:h14
 let g:auto_save = 1
 " Enable highlighting of the current line
 set cursorline
-" Theme and Styling 
+" Theme and Styling
 set t_Co=256
 set background=dark
 
@@ -127,7 +129,7 @@ let base16colorspace=256  " Access colors present in 256 colorspace
 "colorscheme Spacegray
 colorscheme spacemacs-theme
 
-" git-gutter configurations 
+" git-gutter configurations
 let g:gitgutter_enabled = 1
 let g:gitgutter_signs = 1
 let g:gitgutter_highlight_lines = 1
@@ -142,7 +144,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
 "let g:hybrid_custom_term_colors = 1
-"let g:hybrid_reduced_contrast = 1 
+"let g:hybrid_reduced_contrast = 1
 
 " Syntastic Configuration
 set statusline+=%#warningmsg#
@@ -160,7 +162,7 @@ let g:syntastic_check_on_wq = 0
 autocmd! BufWritePost * Neomake
 let g:neomake_elixir_enabled_makers = ['mix', 'credo', 'dogma']
 
-" Vim-PDV Configuration 
+" Vim-PDV Configuration
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 
 " Markdown Syntax Support
@@ -285,7 +287,7 @@ let g:fzf_action = {
 " Default fzf layout
 " - down / up / left / right
 let g:fzf_layout = { 'down': '~40%' }
-    
+
 " In Neovim, you can set up fzf window using a Vim command
 let g:fzf_layout = { 'window': 'enew' }
 let g:fzf_layout = { 'window': '-tabnew' }
@@ -342,7 +344,7 @@ xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
 
 " Shortcuts
-nnoremap <Leader>o :Files<CR> 
+nnoremap <Leader>o :Files<CR>
 nnoremap <Leader>O :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
 
@@ -377,6 +379,10 @@ map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 " Advanced customization using autoload functions
 inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
 
-" Vim-Alchemist Mappings
-autocmd FileType elixir nnoremap <buffer> <leader>h :call alchemist#exdoc()<CR>
-autocmd FileType elixir nnoremap <buffer> <leader>d :call alchemist#exdef()<CR>
+" TAB switch in MacVim
+if has("gui_macvim")
+  " Press Ctrl-Tab to switch between open tabs (like browser tabs) to
+  " the right side. Ctrl-Shift-Tab goes the other way.
+  noremap <C-Tab> :tabnext<CR>
+  noremap <C-S-Tab> :tabprev<CR>
+endif
