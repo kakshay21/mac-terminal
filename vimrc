@@ -3,6 +3,8 @@ syntax on
 set nowrap
 set encoding=UTF-8
 
+set mouse+=a
+
 """" START Vundle Configuration
 
 " Disable file type for vundle
@@ -17,70 +19,70 @@ Plugin 'gmarik/Vundle.vim'
 
 " Utility
 Plugin 'scrooloose/nerdtree'
-Plugin 'majutsushi/tagbar'
+" Plugin 'majutsushi/tagbar'
 Plugin 'ervandew/supertab'
 Plugin 'BufOnly.vim'
 Plugin 'wesQ3/vim-windowswap'
-Plugin 'SirVer/ultisnips'
+"Plugin 'SirVer/ultisnips'
 Plugin 'junegunn/fzf.vim'
 Plugin 'junegunn/fzf'
 Plugin 'godlygeek/tabular'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'benmills/vimux'
+"Plugin 'benmills/vimux'
 Plugin 'jeetsukumaran/vim-buffergator'
-Plugin 'gilsondev/searchtasks.vim'
-Plugin 'Shougo/neocomplete.vim'
-Plugin 'tpope/vim-dispatch'
-Plugin '907th/vim-auto-save'
+"Plugin 'gilsondev/searchtasks.vim'
+"Plugin 'Shougo/neocomplete.vim'
+"Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-commentary'
+" Plugin '907th/vim-auto-save'
 
 " Generic Programming Support
 "Plugin 'jakedouglas/exuberant-ctags'
-Plugin 'honza/vim-snippets'
+" Plugin 'honza/vim-snippets'
 Plugin 'Townk/vim-autoclose'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'tobyS/vmustache'
-Plugin 'janko-m/vim-test'
-Plugin 'maksimr/vim-jsbeautify'
+" Plugin 'tomtom/tcomment_vim'
+" Plugin 'tobyS/vmustache'
+" Plugin 'janko-m/vim-test'
+" Plugin 'maksimr/vim-jsbeautify'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'neomake/neomake'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-rails'
-"Plugin 'w0rp/ale'
+"Plugin 'vim-ruby/vim-ruby'
+"Plugin 'tpope/vim-rails'
+Plugin 'w0rp/ale'
 
 " Markdown / Writting
-Plugin 'reedes/vim-pencil'
-Plugin 'tpope/vim-markdown'
-Plugin 'jtratner/vim-flavored-markdown'
-Plugin 'LanguageTool'
+"Plugin 'reedes/vim-pencil'
+" Plugin 'tpope/vim-markdown'
+" Plugin 'jtratner/vim-flavored-markdown'
+" Plugin 'LanguageTool'
 
 " Git Support
-Plugin 'kablamo/vim-git-log'
-Plugin 'gregsexton/gitv'
+" Plugin 'kablamo/vim-git-log'
+" Plugin 'gregsexton/gitv'
 Plugin 'tpope/vim-fugitive'
-Plugin 'jaxbot/github-issues.vim'
-Plugin 'mhinz/vim-signify'
-Plugin 'airblade/vim-gitgutter'
+" Plugin 'jaxbot/github-issues.vim'
+" Plugin 'mhinz/vim-signify'
+" Plugin 'airblade/vim-gitgutter'
 
 " Theme / Interface
-Plugin 'AnsiEsc.vim'
-Plugin 'ryanoasis/vim-devicons'
+" Plugin 'AnsiEsc.vim'
+" Plugin 'ryanoasis/vim-devicons'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'sjl/badwolf'
-Plugin 'tomasr/molokai'
-Plugin 'morhetz/gruvbox'
-Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+" Plugin 'sjl/badwolf'
+" Plugin 'tomasr/molokai'
+" Plugin 'morhetz/gruvbox'
+" Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 "Plugin 'junegVimarlineunn/limelight.vim'
-Plugin 'mkarmona/colorsbox'
-Plugin 'romainl/Apprentice'
-Plugin 'Lokaltog/vim-distinguished'
-Plugin 'chriskempson/base16-vim'
-Plugin 'w0ng/vim-hybrid'
-Plugin 'AlessandroYorba/Sierra'
-Plugin 'daylerees/colour-schemes'
-Plugin 'effkay/argonaut.vim'
-Plugin 'ajh17/Spacegray.vim'
-Plugin 'atelierbram/Base2Tone-vim'
+" Plugin 'mkarmona/colorsbox'
+" Plugin 'romainl/Apprentice'
+" Plugin 'Lokaltog/vim-distinguished'
+" Plugin 'chriskempson/base16-vim'
+" Plugin 'w0ng/vim-hybrid'
+" Plugin 'AlessandroYorba/Sierra'
+" Plugin 'daylerees/colour-schemes'
+" Plugin 'effkay/argonaut.vim'
+" Plugin 'ajh17/Spacegray.vim'
+" Plugin 'atelierbram/Base2Tone-vim'
 Plugin 'colepeters/spacemacs-theme.vim'
 
 " OSX stupid backspace fix
@@ -108,12 +110,12 @@ set updatetime=250
 set laststatus=2
 
 " Enable Elite mode, No ARRRROWWS!!!!
-"let g:elite_mode=1
+let g:elite_mode=1
 let g:WebDevIconsOS = 'Darwin'
-let g:webdevicons_enable = 1
+" let g:webdevicons_enable = 1
 let g:webdevicons_enable_nerdtree = 1
-let g:webdevicons_enable_airline_tabline = 1
-set guifont=Hack_Regular_Nerd_Font_Complete:h14
+" let g:webdevicons_enable_airline_tabline = 1
+set guifont=Fira_Code:h11
 let g:auto_save = 1
 " Enable highlighting of the current line
 set cursorline
@@ -143,8 +145,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
-"let g:hybrid_custom_term_colors = 1
-"let g:hybrid_reduced_contrast = 1
+let g:hybrid_custom_term_colors = 1
+let g:hybrid_reduced_contrast = 1
 
 " Syntastic Configuration
 set statusline+=%#warningmsg#
@@ -155,12 +157,12 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-" let g:syntastic_enable_elixir_checker = 1
-" let g:syntastic_elixir_checkers = ["elixir"]
+let g:syntastic_enable_elixir_checker = 1
+let g:syntastic_elixir_checkers = ["elixir"]
 
 " Neomake settings
-autocmd! BufWritePost * Neomake
-let g:neomake_elixir_enabled_makers = ['mix', 'credo', 'dogma']
+" autocmd! BufWritePost * Neomake
+" let g:neomake_elixir_enabled_makers = ['mix', 'credo', 'dogma']
 
 " Vim-PDV Configuration
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
@@ -273,9 +275,8 @@ let g:tagbar_type_elixir = {
     \ }
 
 " Ruby configurations
-autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
-autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
-
+"autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
+"autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
 
 " Fzf Configuration
 " This is the default extra key bindings
@@ -316,6 +317,8 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 """""""""""""""""""""""""""""""""""""
 " Mappings configurationn
 """""""""""""""""""""""""""""""""""""
+
+nnoremap <Space><Space> :Files<CR>
 map <C-n> :NERDTreeToggle<CR>
 map <C-m> :TagbarToggle<CR>
 map <C-f> :CtrlPMixed<CR>
